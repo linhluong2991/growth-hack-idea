@@ -48,11 +48,11 @@ body { background: #f6f4ee; color: #15131f; font-family: -apple-system, BlinkMac
 .stat .val { font-size: 22px; font-weight: 800; }
 
 /* LAYOUT */
-.layout { max-width: 1200px; margin: 0 auto; display: flex; gap: 0; align-items: flex-start; padding: 0 20px 60px; }
+.layout { max-width: 1100px; margin: 0 auto; display: flex; gap: 0; align-items: flex-start; padding: 0 20px 60px; }
 
 /* SIDEBAR */
 .sidebar {
-  width: 240px;
+  width: 300px;
   flex-shrink: 0;
   margin-right: 20px;
   position: sticky;
@@ -60,9 +60,9 @@ body { background: #f6f4ee; color: #15131f; font-family: -apple-system, BlinkMac
   max-height: calc(100vh - 40px);
   overflow-y: auto;
 }
-.sidebar-box { background: #fff; border: 2px solid #15131f; border-radius: 14px; padding: 16px; margin-bottom: 12px; }
+.sidebar-box { background: #fff; border: 2px solid #15131f; border-radius: 14px; padding: 12px; margin-bottom: 8px; }
 .sidebar-box:last-child { margin-bottom: 0; }
-.sidebar h3 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin-bottom: 10px; }
+.sidebar h3 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin-bottom: 8px; }
 
 /* Search */
 .search-wrap { position: relative; }
@@ -71,8 +71,8 @@ body { background: #f6f4ee; color: #15131f; font-family: -apple-system, BlinkMac
 #search:focus { border-color: #5b3df0; background: #fff; }
 
 /* Tags */
-.tags-wrap { display: flex; flex-wrap: wrap; gap: 5px; }
-.tag-pill { border: 1.5px solid #ccc; border-radius: 999px; padding: 4px 10px; font-size: 11px; font-weight: 600; cursor: pointer; background: #fff; color: #666; transition: all 0.1s; }
+.tags-wrap { display: flex; flex-wrap: wrap; gap: 4px; }
+.tag-pill { border: 1.5px solid #ccc; border-radius: 999px; padding: 3px 8px; font-size: 10px; font-weight: 600; cursor: pointer; background: #fff; color: #666; transition: all 0.1s; }
 .tag-pill:hover { border-color: #15131f; color: #15131f; }
 .tag-pill.active { background: #15131f; color: #fff; border-color: #15131f; }
 .tags-toggle { display: none; width: 100%; text-align: left; border: 1.5px solid #ccc; border-radius: 8px; padding: 7px 10px; font-size: 12px; font-weight: 600; cursor: pointer; background: #f6f4ee; color: #555; margin-bottom: 8px; }
@@ -135,7 +135,7 @@ body { background: #f6f4ee; color: #15131f; font-family: -apple-system, BlinkMac
 .card-body { padding: 14px 18px 10px; }
 .card-date { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #aaa; margin-bottom: 7px; }
 .card-body h2 { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 9px; }
-.card-tip { font-size: 13.5px; line-height: 1.72; color: #2b2933; white-space: pre-wrap; }
+.card-tip { font-size: 13.5px; line-height: 1.58; color: #2b2933; white-space: pre-wrap; }
 .card-foot { padding: 10px 18px 14px; display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
 .tagged-lbl { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #bbb; margin-right: 3px; flex-shrink: 0; }
 .chip { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 999px; border: 1.5px solid #e0e0e0; background: #f5f5f5; color: #555; cursor: pointer; }
