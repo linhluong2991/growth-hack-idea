@@ -10,17 +10,16 @@
 body { background: #f6f4ee; color: #15131f; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; min-height: 100vh; }
 
 /* TOPBAR */
-.topbar { background: #5b3df0; border-bottom: 3px solid #15131f; padding: 16px 24px; }
-.topbar-inner { max-width: 1180px; margin: 0 auto; display: flex; align-items: center; gap: 12px; }
-.topbar .badge { width: 36px; height: 36px; border-radius: 10px; background: #ffd23f; border: 2.5px solid #15131f; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; flex-shrink: 0; }
-.topbar h1 { color: #fff; font-size: 20px; font-weight: 800; letter-spacing: -0.01em; }
-.topbar p { color: rgba(255,255,255,0.65); font-size: 12px; margin-top: 1px; }
+.topbar { background: #5b3df0; border-bottom: 3px solid #15131f; padding: 14px 24px; }
+.topbar-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 12px; }
+.badge { width: 34px; height: 34px; border-radius: 10px; background: #ffd23f; border: 2.5px solid #15131f; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; flex-shrink: 0; }
+.topbar h1 { color: #fff; font-size: 18px; font-weight: 800; letter-spacing: -0.01em; }
 
 /* HERO */
 .hero {
-  background-color: #dceeb1;
+  background: #b6a8ff;
   border-bottom: 3px solid #15131f;
-  padding: 22px 24px;
+  padding: 28px 24px;
   position: relative;
   overflow: hidden;
 }
@@ -28,117 +27,134 @@ body { background: #f6f4ee; color: #15131f; font-family: -apple-system, BlinkMac
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, #15131f 1px, transparent 1px);
+  background-image: radial-gradient(circle, #15131f 1.2px, transparent 1.2px);
   background-size: 18px 18px;
-  opacity: 0.10;
+  opacity: 0.12;
   pointer-events: none;
 }
-.hero-inner { max-width: 1180px; margin: 0 auto; position: relative; }
-.hero h2 { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; }
-.hero p { font-size: 13px; color: rgba(21,19,31,0.65); margin-top: 4px; font-weight: 500; }
+.hero-inner { max-width: 1200px; margin: 0 auto; position: relative; }
+.hero h2 { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; color: #15131f; }
+.hero p { font-size: 14px; color: rgba(21,19,31,0.6); margin-top: 6px; font-weight: 500; }
 
 /* STATS */
-.stats-bar { border-bottom: 3px solid #15131f; background: #fff; }
-.stats-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
-.stat { padding: 16px 20px; border-right: 2.5px solid #15131f; }
+.stats-bar { border-bottom: 3px solid #15131f; }
+.stats-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); }
+.stat { padding: 14px 20px; border-right: 2.5px solid #15131f; }
 .stat:last-child { border-right: none; }
 .stat:nth-child(1) { background: #ffd23f; }
 .stat:nth-child(2) { background: #ff8fd0; }
 .stat:nth-child(3) { background: #7ee6c8; }
 .stat:nth-child(4) { background: #b6a8ff; }
-.stat .lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.6; margin-bottom: 4px; }
+.stat .lbl { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.6; margin-bottom: 4px; }
 .stat .val { font-size: 22px; font-weight: 800; }
 
 /* LAYOUT */
-.layout { max-width: 1180px; margin: 0 auto; display: flex; gap: 0; align-items: flex-start; }
+.layout { max-width: 1200px; margin: 0 auto; display: flex; align-items: flex-start; }
 
 /* SIDEBAR */
 .sidebar {
-  width: 270px;
+  width: 260px;
   flex-shrink: 0;
   border-right: 2.5px solid #15131f;
-  padding: 20px 18px;
+  padding: 20px 16px;
   position: sticky;
   top: 0;
   max-height: 100vh;
   overflow-y: auto;
   background: #fff;
 }
-.sidebar-section { margin-bottom: 20px; }
+.sidebar-section { margin-bottom: 22px; }
 .sidebar-section:last-child { margin-bottom: 0; }
-.sidebar h3 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.5; margin-bottom: 10px; }
-#search { width: 100%; border: 2.5px solid #15131f; border-radius: 10px; padding: 9px 13px; font-size: 13px; font-weight: 600; background: #f6f4ee; outline: none; }
+.sidebar h3 { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: #888; margin-bottom: 9px; }
+
+/* Search */
+.search-wrap { position: relative; }
+.search-wrap svg { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); opacity: 0.4; pointer-events: none; }
+#search { width: 100%; border: 2px solid #ddd; border-radius: 10px; padding: 9px 12px 9px 34px; font-size: 13px; background: #f6f4ee; outline: none; }
 #search:focus { border-color: #5b3df0; background: #fff; }
 
 /* Tags */
 .tags-wrap { display: flex; flex-wrap: wrap; gap: 5px; }
-.tag-pill { border: 2px solid #aaa; border-radius: 999px; padding: 4px 11px; font-size: 11.5px; font-weight: 700; cursor: pointer; background: #fff; color: #555; transition: all 0.12s; }
+.tag-pill { border: 1.5px solid #ccc; border-radius: 999px; padding: 4px 10px; font-size: 11.5px; font-weight: 600; cursor: pointer; background: #fff; color: #555; transition: all 0.1s; }
 .tag-pill:hover { border-color: #15131f; color: #15131f; }
 .tag-pill.active { background: #15131f; color: #fff; border-color: #15131f; }
-#clear-tags { font-size: 12px; font-weight: 700; color: #e74c3c; cursor: pointer; background: none; border: none; padding: 4px 2px; display: none; }
-#clear-tags.show { display: inline-block; }
 
 /* Date */
 .period-btns { display: flex; gap: 6px; margin-bottom: 10px; }
-.period-btn { flex: 1; border: 2px solid #15131f; border-radius: 8px; padding: 6px 8px; font-size: 12px; font-weight: 700; cursor: pointer; background: #fff; text-align: center; }
+.period-btn { flex: 1; border: 2px solid #15131f; border-radius: 8px; padding: 6px 4px; font-size: 12px; font-weight: 700; cursor: pointer; background: #fff; text-align: center; }
 .period-btn.active { background: #15131f; color: #fff; }
-.date-row { display: flex; gap: 8px; align-items: center; }
-.date-row label { font-size: 11px; font-weight: 700; opacity: 0.5; white-space: nowrap; }
-.date-row input { flex: 1; min-width: 0; border: 2px solid #ccc; border-radius: 7px; padding: 5px 7px; font-size: 11px; font-weight: 600; background: #f6f4ee; outline: none; cursor: pointer; }
-.date-row input:focus { border-color: #5b3df0; }
+.date-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.date-field { display: flex; flex-direction: column; gap: 3px; }
+.date-field label { font-size: 10.5px; font-weight: 700; color: #aaa; text-transform: uppercase; letter-spacing: 0.04em; }
+.date-field input { border: 1.5px solid #ddd; border-radius: 7px; padding: 6px 7px; font-size: 11.5px; background: #f6f4ee; outline: none; cursor: pointer; width: 100%; }
+.date-field input:focus { border-color: #5b3df0; }
+
+/* Clear */
+#clear-all { font-size: 12px; font-weight: 700; color: #5b3df0; cursor: pointer; background: none; border: none; padding: 2px 0; display: none; text-decoration: underline; }
+#clear-all.show { display: inline-block; }
 
 /* MAIN */
 .main { flex: 1; min-width: 0; padding: 20px; }
 .results-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
-.results-bar span { font-size: 13px; font-weight: 700; color: #888; }
+.results-bar .count { font-size: 13px; color: #888; font-weight: 600; }
+.results-bar .sort { font-size: 12px; color: #888; font-weight: 700; }
 
 /* CARDS */
 .cards { display: flex; flex-direction: column; gap: 14px; }
-.card { background: #fff; border: 2.5px solid #15131f; border-radius: 16px; overflow: hidden; }
-.card-head { display: flex; align-items: center; justify-content: space-between; padding: 9px 18px; background: #ffd23f; border-bottom: 2.5px solid #15131f; gap: 10px; }
-.card-head .date { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
-.card-head-right { display: flex; align-items: center; gap: 8px; }
-.card-head .src { font-size: 11.5px; font-weight: 700; background: #15131f; color: #fff; padding: 4px 11px; border-radius: 999px; text-decoration: none; white-space: nowrap; }
-.card-head .src:hover { background: #5b3df0; }
-.card-body { padding: 16px 20px 12px; }
-.card-body h2 { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 9px; color: #15131f; }
-.card-body .tip { font-size: 13.5px; line-height: 1.72; color: #2b2933; white-space: pre-wrap; }
-.card-foot { display: flex; gap: 5px; padding: 10px 20px 14px; flex-wrap: wrap; align-items: center; }
-.chip { font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 999px; border: 1.5px solid #ddd; background: #f0f0f0; color: #555; cursor: pointer; }
-.chip:hover { border-color: #15131f; color: #15131f; }
-.copy-btn { margin-left: auto; font-size: 11.5px; font-weight: 700; border: 2px solid #15131f; border-radius: 999px; padding: 3px 12px; cursor: pointer; background: #fff; color: #15131f; flex-shrink: 0; }
+.card { background: #fff; border: 2.5px solid #15131f; border-radius: 14px; overflow: hidden; }
+
+/* Card action bar - lime green */
+.card-action { background: #dceeb1; border-bottom: 2px solid #15131f; padding: 9px 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.copy-btn { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; border: 1.5px solid #15131f; border-radius: 999px; padding: 4px 12px; cursor: pointer; background: #fff; color: #15131f; white-space: nowrap; }
 .copy-btn:hover { background: #15131f; color: #fff; }
-.copy-btn.copied { background: #7ee6c8; border-color: #15131f; }
+.copy-btn.copied { background: #7ee6c8; }
+.copy-btn svg { opacity: 0.7; }
+.src-btn { font-size: 12px; font-weight: 700; background: #15131f; color: #fff; padding: 5px 13px; border-radius: 999px; text-decoration: none; display: flex; align-items: center; gap: 4px; white-space: nowrap; }
+.src-btn:hover { background: #5b3df0; }
+
+/* Card body */
+.card-body { padding: 14px 18px 6px; }
+.card-date { font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #999; margin-bottom: 7px; }
+.card-body h2 { font-size: 16px; font-weight: 700; line-height: 1.4; margin-bottom: 9px; color: #15131f; }
+.card-tip { font-size: 13.5px; line-height: 1.72; color: #2b2933; white-space: pre-wrap; }
+
+/* Card footer */
+.card-foot { padding: 10px 18px 14px; display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+.tagged-label { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #aaa; margin-right: 2px; }
+.chip { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 999px; border: 1.5px solid #ddd; background: #f5f5f5; color: #555; cursor: pointer; }
+.chip:hover { border-color: #15131f; color: #15131f; }
 
 /* SHOW MORE */
 .show-more-wrap { text-align: center; margin-top: 20px; }
-#show-more { border: 2.5px solid #15131f; border-radius: 999px; padding: 10px 28px; font-size: 14px; font-weight: 700; cursor: pointer; background: #fff; }
+#show-more { border: 2.5px solid #15131f; border-radius: 999px; padding: 10px 30px; font-size: 14px; font-weight: 700; cursor: pointer; background: #fff; }
 #show-more:hover { background: #15131f; color: #fff; }
-#no-results { text-align: center; color: #aaa; padding: 60px 20px; font-weight: 700; }
+#no-results { text-align: center; color: #aaa; padding: 60px 20px; font-weight: 700; font-size: 14px; }
 
 /* BACK TO TOP */
-#back-top { position: fixed; bottom: 24px; right: 20px; width: 44px; height: 44px; background: #15131f; color: #fff; border: none; border-radius: 999px; font-size: 18px; font-weight: 700; cursor: pointer; display: none; box-shadow: 0 3px 12px rgba(0,0,0,0.25); z-index: 99; }
+#back-top { position: fixed; bottom: 24px; right: 20px; width: 44px; height: 44px; background: #15131f; color: #fff; border: none; border-radius: 999px; font-size: 18px; font-weight: 700; cursor: pointer; display: none; align-items: center; justify-content: center; box-shadow: 0 3px 12px rgba(0,0,0,0.25); z-index: 99; }
 #back-top:hover { background: #5b3df0; }
 
 /* MOBILE */
 @media (max-width: 700px) {
-  .hero h2 { font-size: 20px; }
-  .stats-inner { grid-template-columns: repeat(2, 1fr); }
-  .stat { border-right: 2.5px solid #15131f; border-bottom: 2.5px solid #15131f; }
-  .stat:nth-child(2), .stat:nth-child(4) { border-right: none; }
-  .stat:nth-child(3), .stat:nth-child(4) { border-bottom: none; }
+  .hero h2 { font-size: 22px; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); }
+  .stat:nth-child(1) { border-right: 2.5px solid #15131f; border-bottom: 2.5px solid #15131f; }
+  .stat:nth-child(2) { border-right: none; border-bottom: 2.5px solid #15131f; }
+  .stat:nth-child(3) { border-right: 2.5px solid #15131f; }
+  .stat:nth-child(4) { border-right: none; }
   .layout { flex-direction: column; }
   .sidebar { width: 100%; position: static; max-height: none; border-right: none; border-bottom: 2.5px solid #15131f; }
-  .sidebar .tags-wrap { display: none; }
-  .sidebar .tags-wrap.mobile-open { display: flex; }
-  .tags-toggle-btn { display: flex; align-items: center; justify-content: space-between; width: 100%; border: 2px solid #15131f; border-radius: 8px; padding: 7px 12px; font-size: 12px; font-weight: 700; cursor: pointer; background: #f6f4ee; margin-bottom: 6px; }
-  .tags-toggle-btn.has-active { background: #15131f; color: #fff; }
+  /* On mobile, sidebar NOT sticky - scrolls normally */
+  .tags-wrap { display: none; }
+  .tags-wrap.mobile-open { display: flex; }
+  .tags-toggle { display: flex !important; }
   .main { padding: 14px 12px; }
 }
-/* Hide toggle button on desktop */
+.tags-toggle { display: none; align-items: center; justify-content: space-between; border: 1.5px solid #ccc; border-radius: 8px; padding: 8px 12px; font-size: 13px; font-weight: 600; cursor: pointer; background: #f6f4ee; color: #555; margin-bottom: 6px; }
+.tags-toggle.has-active { background: #15131f; color: #fff; border-color: #15131f; }
 @media (min-width: 701px) {
-  .tags-toggle-btn { display: none; }
-  .sidebar .tags-wrap { display: flex !important; }
+  .tags-wrap { display: flex !important; }
+  .tags-toggle { display: none !important; }
 }
 </style>
 </head>
@@ -147,17 +163,14 @@ body { background: #f6f4ee; color: #15131f; font-family: -apple-system, BlinkMac
 <div class="topbar">
   <div class="topbar-inner">
     <div class="badge">G</div>
-    <div>
-      <h1>GROWTH HACK LIBRARY</h1>
-      <p>Daily tips from Charlie Patel · GrowthHackingIdea</p>
-    </div>
+    <h1>GROWTH HACK LIBRARY</h1>
   </div>
 </div>
 
 <div class="hero">
   <div class="hero-inner">
-    <h2>1,445 Growth Hacks. One Search.</h2>
-    <p>Years of daily tips from GrowthHackingIdea — searchable, filterable, yours.</p>
+    <h2>Growth Hack Library</h2>
+    <p>Search, filter, and rediscover proven growth ideas.</p>
   </div>
 </div>
 
@@ -172,9 +185,48 @@ body { background: #f6f4ee; color: #15131f; font-family: -apple-system, BlinkMac
 
 <div class="layout">
   <aside class="sidebar">
+
     <div class="sidebar-section">
       <h3>Search</h3>
-      <input id="search" type="text" placeholder="CRO, open rate, headline…" oninput="render()" autocomplete="off">
+      <div class="search-wrap">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="search" type="text" placeholder="Search tips, headlines, tags..." oninput="onSearch()" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>Tags</h3>
+      <button class="tags-toggle" id="tags-toggle" onclick="toggleMobileTags()">Show tags</button>
+      <div class="tags-wrap" id="tags-wrap">
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="A/B Testing">A/B Testing</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Ads & Acquisition">Ads & Acquisition</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Affiliate Marketing">Affiliate Marketing</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="CRO">CRO</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Content Marketing">Content Marketing</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Copywriting">Copywriting</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Customer Research">Customer Research</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="E-commerce">E-commerce</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Email Marketing">Email Marketing</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Growth Strategy">Growth Strategy</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Headlines & Subject Lines">Headlines & Subject Lines</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Influencer Marketing">Influencer Marketing</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Landing Page">Landing Page</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Lead Generation">Lead Generation</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Mobile App">Mobile App</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Onboarding">Onboarding</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Open Rate">Open Rate</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="PR & Media">PR & Media</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Paid Ads">Paid Ads</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Pricing">Pricing</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Psychology & Persuasion">Psychology & Persuasion</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Referral & Virality">Referral & Virality</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Retention">Retention</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="SEO">SEO</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Sales">Sales</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Social Media">Social Media</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Video Marketing">Video Marketing</button>
+        <button class="tag-pill" onclick="filterTag(this)" data-tag="Webinars">Webinars</button>
+      </div>
     </div>
 
     <div class="sidebar-section">
@@ -183,53 +235,26 @@ body { background: #f6f4ee; color: #15131f; font-family: -apple-system, BlinkMac
         <button class="period-btn active" id="btn-all" onclick="setPeriod('all')">All Time</button>
         <button class="period-btn" id="btn-month" onclick="setPeriod('month')">This Month</button>
       </div>
-      <div class="date-row">
-        <label>From</label>
-        <input type="date" id="date-start" onchange="setPeriod('custom');render()">
-        <label>To</label>
-        <input type="date" id="date-end" onchange="setPeriod('custom');render()">
+      <div class="date-inputs">
+        <div class="date-field">
+          <label>Start date</label>
+          <input type="date" id="date-start" onchange="setPeriod('custom')">
+        </div>
+        <div class="date-field">
+          <label>End date</label>
+          <input type="date" id="date-end" onchange="setPeriod('custom')">
+        </div>
       </div>
     </div>
 
-    <div class="sidebar-section">
-      <h3>Tags <button id="clear-tags" onclick="clearTagFilter()">✕ Clear</button></h3>
-      <button class="tags-toggle-btn" id="tags-toggle-btn" onclick="toggleMobileTags()">Show tags</button>
-      <div class="tags-wrap" id="tags-wrap">
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="CRO">CRO</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Email Marketing">Email Marketing</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Open Rate">Open Rate</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="A/B Testing">A/B Testing</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="SEO">SEO</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Content Marketing">Content Marketing</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Social Media">Social Media</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Paid Ads">Paid Ads</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Copywriting">Copywriting</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Pricing">Pricing</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Onboarding">Onboarding</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Referral & Virality">Referral & Virality</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Landing Page">Landing Page</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Retention">Retention</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Sales">Sales</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="PR & Media">PR & Media</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Influencer Marketing">Influencer Marketing</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Mobile App">Mobile App</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="E-commerce">E-commerce</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Customer Research">Customer Research</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Psychology & Persuasion">Psychology & Persuasion</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Headlines & Subject Lines">Headlines & Subject Lines</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Lead Generation">Lead Generation</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Webinars">Webinars</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Video Marketing">Video Marketing</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Affiliate Marketing">Affiliate Marketing</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Growth Strategy">Growth Strategy</button>
-        <button class="tag-pill" onclick="filterTag(this)" data-tag="Ads & Acquisition">Ads & Acquisition</button>
-      </div>
-    </div>
+    <button id="clear-all" onclick="clearAll()">Clear all filters</button>
+
   </aside>
 
   <main class="main">
     <div class="results-bar">
-      <span id="results-label"></span>
+      <span class="count" id="count-label"></span>
+      <span class="sort">Sort: Newest</span>
     </div>
     <div class="cards" id="cards"></div>
     <div id="no-results" style="display:none">No tips match your search.</div>
@@ -247,104 +272,98 @@ const raw = JSON.parse(document.getElementById('data').textContent);
 let activeTag = null;
 let period = 'all';
 let shown = 20;
-let currentFiltered = raw;
+let currentFiltered = [];
 
 window.addEventListener('scroll', () => {
-  document.getElementById('back-top').style.display = window.scrollY > 400 ? 'flex' : 'none';
+  const btn = document.getElementById('back-top');
+  btn.style.display = window.scrollY > 400 ? 'flex' : 'none';
 });
+
+function onSearch() { shown = 20; render(); }
 
 function setPeriod(p) {
   period = p;
   document.getElementById('btn-all').classList.toggle('active', p === 'all');
   document.getElementById('btn-month').classList.toggle('active', p === 'month');
   if (p === 'month') {
-    const now = new Date();
-    const y = now.getFullYear(), m = String(now.getMonth()+1).padStart(2,'0');
+    const now = new Date(), y = now.getFullYear(), m = String(now.getMonth()+1).padStart(2,'0');
     document.getElementById('date-start').value = y+'-'+m+'-01';
     document.getElementById('date-end').value = y+'-'+m+'-'+String(new Date(y,now.getMonth()+1,0).getDate()).padStart(2,'0');
   } else if (p === 'all') {
     document.getElementById('date-start').value = '';
     document.getElementById('date-end').value = '';
   }
-  shown = 20;
-  render();
+  shown = 20; render();
 }
 
 function toggleMobileTags() {
   const wrap = document.getElementById('tags-wrap');
-  const btn = document.getElementById('tags-toggle-btn');
+  const btn = document.getElementById('tags-toggle');
   const open = wrap.classList.toggle('mobile-open');
   btn.textContent = open ? 'Hide tags' : (activeTag ? 'Tag: '+activeTag : 'Show tags');
 }
 
 function filterTag(el) {
   const tag = el.dataset.tag;
-  if (activeTag === tag) {
-    activeTag = null;
-    document.querySelectorAll('.tag-pill').forEach(c => c.classList.remove('active'));
-  } else {
-    activeTag = tag;
-    document.querySelectorAll('.tag-pill').forEach(c => c.classList.toggle('active', c.dataset.tag === tag));
-  }
-  const clearBtn = document.getElementById('clear-tags');
-  clearBtn.classList.toggle('show', !!activeTag);
-  const toggleBtn = document.getElementById('tags-toggle-btn');
-  toggleBtn.classList.toggle('has-active', !!activeTag);
-  toggleBtn.textContent = activeTag ? 'Tag: '+activeTag : 'Show tags';
-  if (window.innerWidth <= 700) {
-    document.getElementById('tags-wrap').classList.remove('mobile-open');
-  }
-  shown = 20;
-  render();
-}
-
-function clearTagFilter() {
-  activeTag = null;
-  document.querySelectorAll('.tag-pill').forEach(c => c.classList.remove('active'));
-  document.getElementById('clear-tags').classList.remove('show');
-  document.getElementById('tags-toggle-btn').classList.remove('has-active');
-  document.getElementById('tags-toggle-btn').textContent = 'Show tags';
-  shown = 20;
-  render();
+  activeTag = (activeTag === tag) ? null : tag;
+  document.querySelectorAll('.tag-pill').forEach(c => c.classList.toggle('active', c.dataset.tag === activeTag));
+  const toggle = document.getElementById('tags-toggle');
+  toggle.classList.toggle('has-active', !!activeTag);
+  toggle.textContent = activeTag ? 'Tag: '+activeTag : 'Show tags';
+  if (window.innerWidth <= 700) document.getElementById('tags-wrap').classList.remove('mobile-open');
+  updateClearBtn(); shown = 20; render();
 }
 
 function setTag(t) {
   activeTag = t;
   document.querySelectorAll('.tag-pill').forEach(c => c.classList.toggle('active', c.dataset.tag === t));
-  document.getElementById('clear-tags').classList.add('show');
-  shown = 20;
-  render();
+  document.getElementById('tags-toggle').classList.toggle('has-active', !!t);
+  updateClearBtn(); shown = 20; render();
 }
 
-function showMore() {
-  shown += 20;
-  renderCards();
+function clearAll() {
+  activeTag = null;
+  document.querySelectorAll('.tag-pill').forEach(c => c.classList.remove('active'));
+  document.getElementById('search').value = '';
+  document.getElementById('date-start').value = '';
+  document.getElementById('date-end').value = '';
+  period = 'all';
+  document.getElementById('btn-all').classList.add('active');
+  document.getElementById('btn-month').classList.remove('active');
+  document.getElementById('tags-toggle').classList.remove('has-active');
+  document.getElementById('tags-toggle').textContent = 'Show tags';
+  document.getElementById('clear-all').classList.remove('show');
+  shown = 20; render();
+}
+
+function updateClearBtn() {
+  const active = activeTag || document.getElementById('search').value || document.getElementById('date-start').value || document.getElementById('date-end').value;
+  document.getElementById('clear-all').classList.toggle('show', !!active);
+}
+
+function showMore() { shown += 20; renderCards(); }
+
+function fmtDate(d) {
+  if (!d) return '';
+  const [y,m,dy] = d.split('-');
+  const M=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  return 'PUBLISHED '+M[+m-1]+' '+parseInt(dy)+', '+y;
 }
 
 function esc(s) {
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-function fmtDate(d) {
-  if (!d) return '';
-  const [y,m,dy] = d.split('-');
-  const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  return months[+m-1]+' '+parseInt(dy)+', '+y;
-}
-
 function copyTip(btn, tip) {
-  const copy = (text) => {
-    if (navigator.clipboard) return navigator.clipboard.writeText(text);
-    const ta = document.createElement('textarea');
-    ta.value = text; ta.style.position='fixed'; ta.style.opacity='0';
-    document.body.appendChild(ta); ta.focus(); ta.select();
-    document.execCommand('copy'); document.body.removeChild(ta);
+  const doCopy = t => navigator.clipboard ? navigator.clipboard.writeText(t) : (()=>{
+    const ta = Object.assign(document.createElement('textarea'),{value:t,style:'position:fixed;opacity:0'});
+    document.body.appendChild(ta); ta.focus(); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
     return Promise.resolve();
-  };
-  copy(tip).then(() => {
-    btn.textContent = 'Copied!';
+  })();
+  doCopy(tip).then(() => {
+    btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
     btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = 'Copy tip'; btn.classList.remove('copied'); }, 1500);
+    setTimeout(() => { btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy tip'; btn.classList.remove('copied'); }, 1500);
   });
 }
 
@@ -353,36 +372,40 @@ function renderCards() {
   const noRes = document.getElementById('no-results');
   const smWrap = document.getElementById('show-more-wrap');
   const total = currentFiltered.length;
+  document.getElementById('count-label').textContent = 'Showing ' + Math.min(shown, total) + ' of ' + total + ' tips';
   if (!total) { cards.innerHTML=''; noRes.style.display='block'; smWrap.style.display='none'; return; }
-  noRes.style.display='none';
-  const slice = currentFiltered.slice(0, shown);
-  cards.innerHTML = slice.map(r => {
-    const tags = (r.tags||[]).map(t=>`<span class="chip" onclick="setTag('${esc(t)}')">${esc(t)}</span>`).join('');
-    const src = r.source_url ? `<a class="src" href="${esc(r.source_url)}" target="_blank" rel="noopener">Source ↗</a>` : '';
-    const tipEsc = esc(r.tip||'');
+  noRes.style.display = 'none';
+  cards.innerHTML = currentFiltered.slice(0, shown).map(r => {
+    const chips = (r.tags||[]).map(t=>`<span class="chip" onclick="setTag('${esc(t)}')">${esc(t)}</span>`).join('');
+    const src = r.source_url ? `<a class="src-btn" href="${esc(r.source_url)}" target="_blank" rel="noopener">Source ↗</a>` : '';
+    const tipText = JSON.stringify(r.tip||'');
     return `<div class="card">
-      <div class="card-head">
-        <span class="date">${fmtDate(r.date)}</span>
-        <div class="card-head-right">${src}</div>
-      </div>
-      <div class="card-body"><h2>${esc(r.headline)}</h2><div class="tip">${tipEsc}</div></div>
-      <div class="card-foot">${tags}<button class="copy-btn" onclick="copyTip(this, ${JSON.stringify(r.tip||'')})">Copy tip</button></div>
-    </div>`;
+  <div class="card-action">
+    <button class="copy-btn" onclick="copyTip(this,${tipText})"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copy tip</button>
+    ${src}
+  </div>
+  <div class="card-body">
+    <div class="card-date">${fmtDate(r.date)}</div>
+    <h2>${esc(r.headline)}</h2>
+    <div class="card-tip">${esc(r.tip)}</div>
+  </div>
+  <div class="card-foot"><span class="tagged-label">Tagged in:</span>${chips}</div>
+</div>`;
   }).join('');
   smWrap.style.display = shown < total ? 'block' : 'none';
-  document.getElementById('results-label').textContent = `Showing ${Math.min(shown,total)} of ${total} tips`;
 }
 
 function render() {
   const q = document.getElementById('search').value.toLowerCase().trim();
   const ds = document.getElementById('date-start').value;
   const de = document.getElementById('date-end').value;
-  let filtered = raw;
-  if (q) filtered = filtered.filter(r=>(r.headline+' '+r.tip+' '+(r.tags||[]).join(' ')).toLowerCase().includes(q));
-  if (activeTag) filtered = filtered.filter(r=>(r.tags||[]).includes(activeTag));
-  if (ds) filtered = filtered.filter(r=>r.date>=ds);
-  if (de) filtered = filtered.filter(r=>r.date<=de);
-  currentFiltered = filtered;
+  let f = raw;
+  if (q) f = f.filter(r=>(r.headline+' '+r.tip+' '+(r.tags||[]).join(' ')).toLowerCase().includes(q));
+  if (activeTag) f = f.filter(r=>(r.tags||[]).includes(activeTag));
+  if (ds) f = f.filter(r=>r.date>=ds);
+  if (de) f = f.filter(r=>r.date<=de);
+  currentFiltered = f;
+  updateClearBtn();
   renderCards();
 }
 
